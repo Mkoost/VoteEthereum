@@ -1,0 +1,58 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "Create_Survey",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Project/Surveys.sol": "Surveys"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Project/Surveys.sol": {
+			"keccak256": "0x5705f672b10131d91f5c412c9f3ac74d6490e8909aa0d1bb9684517635228145",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://484b7a189fd62ebaaa876adcf7914aac7f8ab0ecb4651e778a1d4655ad1d0e8c",
+				"dweb:/ipfs/QmTQdvwNtRoj2XriYVkS8KFwahM3zmYU9neL9f3i6wYbfZ"
+			]
+		}
+	},
+	"version": 1
+}
