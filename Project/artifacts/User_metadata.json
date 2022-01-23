@@ -4,7 +4,24 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nickname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +50,11 @@
 	},
 	"sources": {
 		"Project/Users.sol": {
-			"keccak256": "0xd7fc4cfd76fae9444e48015dd281973577502c91d1118db12d00c1fb6f66fe95",
+			"keccak256": "0xa51d9181e047c634d1ac79ae9e2fd1d03d09edd41f4c28502d8c34aac99ef1d2",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://0cb394832a899870574ef4f7a17329bfd9130a0ac9d196b8b23977be1d9aeb18",
-				"dweb:/ipfs/QmTNJyRypyoWZoFYQuN7pTFsVGSUSASS9an3cKzKLuKUSs"
+				"bzz-raw://d66c3804c6ee5ca85523981ad0e0fc733fb7ecc7d7947b98f24bf1b638215e74",
+				"dweb:/ipfs/QmbD37wPcxjuG2XwAsXfcF8rdKT1nSvZFAYexs1TasQFTw"
 			]
 		}
 	},

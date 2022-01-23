@@ -6,14 +6,74 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_text_of_question",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_count_of_questions",
+						"type": "uint8"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "number",
+						"type": "uint8"
+					}
+				],
+				"name": "give_a_vote",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "Create_Survey",
-				"outputs": [],
+				"name": "look_a_text",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "number",
+						"type": "uint8"
+					}
+				],
+				"name": "statistics",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "view",
 				"type": "function"
 			}
@@ -46,11 +106,19 @@
 	},
 	"sources": {
 		"Project/Surveys.sol": {
-			"keccak256": "0x5705f672b10131d91f5c412c9f3ac74d6490e8909aa0d1bb9684517635228145",
+			"keccak256": "0x2458082ea892234aa19e575c382016329efae4e6e0d08361dd01b17b08a0349c",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://484b7a189fd62ebaaa876adcf7914aac7f8ab0ecb4651e778a1d4655ad1d0e8c",
-				"dweb:/ipfs/QmTQdvwNtRoj2XriYVkS8KFwahM3zmYU9neL9f3i6wYbfZ"
+				"bzz-raw://b1250821bdacc089db60164459c4a1303552e7263f136bb3df5a68bccc46c7d8",
+				"dweb:/ipfs/QmRfnoywRDoRNUxtPUuJV973RsKqFBHVsi3rgHcSyyYfUV"
+			]
+		},
+		"Project/Users.sol": {
+			"keccak256": "0x6e18bc6ac8bcaae767a52378e4494e7176dfb5120535e3dc7402888aba4ac1ae",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://91e62d59da278ef8ff32131bdf386a8fa9d5a0c139003e0250391efae8d58687",
+				"dweb:/ipfs/QmQkHFXSjuWZH75sau7KKyY9kQvnGqnbTnrSKbpY6sy7iP"
 			]
 		}
 	},
