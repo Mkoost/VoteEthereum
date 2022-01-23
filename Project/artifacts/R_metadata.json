@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Project/Roulette.sol": "R"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Project/Roulette.sol": {
+			"keccak256": "0xd0fab11ef55357f12876383957ca8564a65d30496de3a76d8531c91f275fbd0b",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://74795bfe682210513770b3a224830b8ae1e91ca44a06b380b5d8c75f92bf5fb8",
+				"dweb:/ipfs/QmdqjewCy442HZEUckQoPkB3wrHsGFnw4fLftF6eo9aPs5"
+			]
+		}
+	},
+	"version": 1
+}

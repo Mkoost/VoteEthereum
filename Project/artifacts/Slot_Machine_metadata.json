@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Project/temp.sol": "Slot_Machine"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Project/temp.sol": {
+			"keccak256": "0x7933165744f138c6d0a5b2629b525fc988f2c492df638d0de82961ea0d6cb380",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://fce2e1e83c9b3dc1ec9642758589626dce7feff8488fda3de02d7496037cfde5",
+				"dweb:/ipfs/QmRJAkHxCVgYMYVNm9MiwTJjoyUtKH5d8DJJQQboaoeMJn"
+			]
+		}
+	},
+	"version": 1
+}

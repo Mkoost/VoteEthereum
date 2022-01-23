@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Project/Games.sol": "Roulette"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Project/Games.sol": {
+			"keccak256": "0x159cfd8c2fa489d87d084e31bb6948f03bb40033a02cdaeb7de0f9884f34abdf",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://7ac422cb43bb50c62ca0e1fed1f545b6e156fa21fde4725b55e706efe77996c7",
+				"dweb:/ipfs/QmezZLwg3eqAGym8UQWufdFueyxHojJWdvN4LGHx41TPj2"
+			]
+		}
+	},
+	"version": 1
+}

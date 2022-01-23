@@ -45,9 +45,4 @@ contract Token{
         return(balances[msg.sender]);
     }
 
-
-
-
-
-
 }
