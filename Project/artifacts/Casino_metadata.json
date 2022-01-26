@@ -4,7 +4,26 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_address",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "Top_up_balance",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +52,19 @@
 	},
 	"sources": {
 		"Project/Casino.sol": {
-			"keccak256": "0xd7f28fb4e27593b08cdff0e2fe2a8b0b56d75c8a42efdff492c136292c20ba60",
+			"keccak256": "0x2603688ca14c39f1e694263e0f1bacbd0449370815267c88b2ccb5dfaa859746",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://1f9af7b7fc230f8a1e5f2a968bd34c1e307d1e47b39788e64b4effdf0528a05a",
-				"dweb:/ipfs/QmUTd24aehaLd7YvgFC136YRVxSHsUpFREeyfYUzyq6CBP"
+				"bzz-raw://ae25fab2f12acfc296e09e7682d8975f21026274dd4f232c48f0b202cc34138f",
+				"dweb:/ipfs/QmXvvhJ7Xon568Go6uMVoMHSnMzormnbLSJSKzQCmE5a7q"
+			]
+		},
+		"Project/Token.sol": {
+			"keccak256": "0xb54a9448d738650540926ef16c7ff0f5eae85187573f03e040bafd50606c2e68",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://201cbd51cefc24d7b90db60d9cca36f76e6903ec13b99d8c7a1869c98c153002",
+				"dweb:/ipfs/QmQgnRfWUnkH7DmFnFo4LntPoZKGnTCEzFQbpySgSZV9DZ"
 			]
 		}
 	},

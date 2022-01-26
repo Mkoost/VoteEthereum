@@ -11,13 +11,7 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "adr",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"name": "balanceOf",
 				"outputs": [
 					{
@@ -30,8 +24,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "balanceOf",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "balances",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -77,29 +77,6 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "k",
-						"type": "uint256"
-					}
-				],
-				"name": "transferFrom",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -130,11 +107,11 @@
 	},
 	"sources": {
 		"Project/Token.sol": {
-			"keccak256": "0x02c71733810a3598c5ed2dcdd95668c4ad41109b2343746262f94b99ef187ea0",
+			"keccak256": "0xb54a9448d738650540926ef16c7ff0f5eae85187573f03e040bafd50606c2e68",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f92510884703f92a7641515cd11320c9f9ceee89964f8ab7ce912ad9f8bd5b9f",
-				"dweb:/ipfs/QmdbUQDwG8Nwcm64NLeCJq23C3QLSNrD1nEGhxJeP7Totr"
+				"bzz-raw://201cbd51cefc24d7b90db60d9cca36f76e6903ec13b99d8c7a1869c98c153002",
+				"dweb:/ipfs/QmQgnRfWUnkH7DmFnFo4LntPoZKGnTCEzFQbpySgSZV9DZ"
 			]
 		}
 	},

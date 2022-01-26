@@ -4,7 +4,67 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "Token_owner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bet",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "color",
+						"type": "string"
+					}
+				],
+				"name": "Bet_and_play_on_color",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bet",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint16",
+						"name": "number",
+						"type": "uint16"
+					}
+				],
+				"name": "Bet_and_play_on_number",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +93,19 @@
 	},
 	"sources": {
 		"Project/Games.sol": {
-			"keccak256": "0x159cfd8c2fa489d87d084e31bb6948f03bb40033a02cdaeb7de0f9884f34abdf",
+			"keccak256": "0x571229f154c677c2e4f01669aaa703a11ed67be9293fc13eaf07b7f8fe89d4d6",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://7ac422cb43bb50c62ca0e1fed1f545b6e156fa21fde4725b55e706efe77996c7",
-				"dweb:/ipfs/QmezZLwg3eqAGym8UQWufdFueyxHojJWdvN4LGHx41TPj2"
+				"bzz-raw://dab52955becf31b1891cea84dbe0e6308468c3a6e15d6280f1a2305b51d3e4d7",
+				"dweb:/ipfs/QmSWKRwCL82kPF2h7M3PkmmN4URGCLcHWrbXHqvNEGuLR9"
+			]
+		},
+		"Project/Token.sol": {
+			"keccak256": "0xb855fa4595f426c8fa34165fb25b3d41b630ec9680ca0503597d74f7fd6d10b8",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://da6879d1dd56c05a6925e18fc2926a61c511d9ce075e26cdfd6bb44a136dc369",
+				"dweb:/ipfs/QmdFyUvEsqPQcqezto8twtrjgZenUx5HqQ5ejC4ZLYFiSw"
 			]
 		}
 	},
