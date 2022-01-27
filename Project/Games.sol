@@ -1,22 +1,25 @@
 // SPDX-License-Identifier: GPL-3.0
 
-import "./Token.sol";
+import "./Token.sol" as token;
 
 pragma solidity >=0.8.7;
 
 contract Roulette{
-    Token tok;
-    address owner_address;
+    token.Token tok;
+    address token_owner_address = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
 
-    constructor(address Token_owner){
-        owner_address = Token_owner;
-        tok = Token(owner_address);
+    constructor(){
+        tok = token.Token(token_owner_address);
     }
 
     modifier Pay (uint bet, address adr){
-        bet >= 15;
-        tok.transfer(owner_address, bet);
+        bet >= 1;
+        tok.transfer(token_owner_address, bet);
         _;
+    } 
+
+    function Top_up_balance() public payable {
+        tok.mint(msg.sender , msg.value * 5);
     }
 
     function rnd(address adr, uint16 number, string memory col, uint bet) view internal returns(uint16){

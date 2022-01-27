@@ -6,13 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "Token_owner",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -63,6 +57,13 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "Top_up_balance",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -93,19 +94,19 @@
 	},
 	"sources": {
 		"Project/Games.sol": {
-			"keccak256": "0x571229f154c677c2e4f01669aaa703a11ed67be9293fc13eaf07b7f8fe89d4d6",
+			"keccak256": "0x519419d4322268ddcb66dec95593bbee3b973521f9b61cec3a7fa4d17bd39141",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://dab52955becf31b1891cea84dbe0e6308468c3a6e15d6280f1a2305b51d3e4d7",
-				"dweb:/ipfs/QmSWKRwCL82kPF2h7M3PkmmN4URGCLcHWrbXHqvNEGuLR9"
+				"bzz-raw://e3b197633ac9c8563e66eb8cef034dde4c396b17a49ea0a52a6508259e33797e",
+				"dweb:/ipfs/QmXFQNtFE1D4u4MYUCijoYtc8K7G1nn5zF6hbgQPWDsdz1"
 			]
 		},
 		"Project/Token.sol": {
-			"keccak256": "0xb855fa4595f426c8fa34165fb25b3d41b630ec9680ca0503597d74f7fd6d10b8",
+			"keccak256": "0x49d8cc7edf9cc21d8c91b82c698baf93e103574b12a240d39f18f2dd4a5746b4",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://da6879d1dd56c05a6925e18fc2926a61c511d9ce075e26cdfd6bb44a136dc369",
-				"dweb:/ipfs/QmdFyUvEsqPQcqezto8twtrjgZenUx5HqQ5ejC4ZLYFiSw"
+				"bzz-raw://2ad581521b233db9c536d634c58ee626b184e4e2f4ceab434730508fb54b9e18",
+				"dweb:/ipfs/Qma7aBjaM45Y9mNpfaZuzsrcTxgRqXcty5SaASjhQjf8CT"
 			]
 		}
 	},

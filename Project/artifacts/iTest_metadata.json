@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Project/Token.sol": "iTest"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Project/Token.sol": {
+			"keccak256": "0x6a478f9edba623cab237b1372a37b7f395230316a0cead9cb4da1b3755ffd918",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://4f265e504c5296f964bb88e00b67bdc1382d4b659bd9344ffd9af2eeb086b646",
+				"dweb:/ipfs/QmWiFknLhpe6GyrcHv12eK43P9Zsn9KKMj2GTAqBQKUW8v"
+			]
+		}
+	},
+	"version": 1
+}

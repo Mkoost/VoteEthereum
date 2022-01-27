@@ -46,7 +46,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "adr_to_trans",
+						"name": "adr",
 						"type": "address"
 					},
 					{
@@ -107,11 +107,11 @@
 	},
 	"sources": {
 		"Project/Token.sol": {
-			"keccak256": "0xb54a9448d738650540926ef16c7ff0f5eae85187573f03e040bafd50606c2e68",
+			"keccak256": "0x49d8cc7edf9cc21d8c91b82c698baf93e103574b12a240d39f18f2dd4a5746b4",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://201cbd51cefc24d7b90db60d9cca36f76e6903ec13b99d8c7a1869c98c153002",
-				"dweb:/ipfs/QmQgnRfWUnkH7DmFnFo4LntPoZKGnTCEzFQbpySgSZV9DZ"
+				"bzz-raw://2ad581521b233db9c536d634c58ee626b184e4e2f4ceab434730508fb54b9e18",
+				"dweb:/ipfs/Qma7aBjaM45Y9mNpfaZuzsrcTxgRqXcty5SaASjhQjf8CT"
 			]
 		}
 	},
