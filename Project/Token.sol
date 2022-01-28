@@ -2,48 +2,49 @@
  
 pragma solidity >=0.8.7;
  
-contract Token{
-    string constant name = "Token777";
-    string constant symbol = "777";
+contract Token{ // конртакт токена-валюты для казино
+    string constant name = "CasinoToken888";
+    string constant symbol = "888";
     uint8 constant decimals = 3;
     uint totalSupply = 0;
-    mapping(address => uint256) public balances;
+    mapping(address => uint256) balances; // словарь балансов
  
     address owner;
  
-    modifier onlyOwner(){
+    modifier onlyOwner(){ 
         require(msg.sender == owner);
         _;
     }
  
     constructor(){
         owner = msg.sender;
-        mint(owner, 100000);
+        mint(address(this), 1000000000000000000000); // эмиссия огромного количества токенов
     }
  
-    function mint(address adr, uint k) public onlyOwner {
-        totalSupply += k;
-        balances[adr] += k;
+    function mint(address adr, uint number_of_tokens) public onlyOwner { // ф-ия проведения эмиссии
+        totalSupply += number_of_tokens;
+        balances[adr] += number_of_tokens;
     }
  
-    function transfer(address adr_to_send, uint k) external {
-        require((balances[msg.sender] >= k) && (adr_to_send == owner));
-        balances[msg.sender] -= k;
-        balances[adr_to_send] += k;
+    function transfer(address adr_to_send, uint number_of_tokens) external { // ф-ия переаода токенов с баланса вызвавшего ф-ию на любой адрес
+        require((balances[msg.sender] >= number_of_tokens) && (adr_to_send == owner));
+        balances[msg.sender] -= number_of_tokens;
+        balances[adr_to_send] += number_of_tokens;
     }
  
-    function transferFrom(address _from, address _to, uint k) external {
-        require(balances[_from] >= k);
-        balances[_from] -= k;
-        balances[_to] += k;
+    function transfer_from(address _from, address _to, uint number_of_tokens) external onlyOwner {  // ф-ия перевода со стороннего аккаунта на другой
+        require(balances[_from] >= number_of_tokens);
+        balances[_from] -= number_of_tokens;
+        balances[_to] += number_of_tokens;
     }
  
-    function balanceOf(address adr) private onlyOwner view returns(uint){
+    function balance_of_others(address adr_from, address adr) public view  onlyOwner returns(uint){ // ф-ия просмотра баланса аккаунта по адресу
+        require (adr_from == owner, "This function is available only for thw owner");
         return(balances[adr]);
     }
  
-    function balanceOf() public view returns(uint){
-        return(balances[msg.sender]);
+    function balance_of(address adr) public view returns(uint){ // ф-ия просмотра баланса вызвавшего ф-ию
+        return(balances[adr]);
     }
  
  
