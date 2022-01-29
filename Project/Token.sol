@@ -10,13 +10,13 @@ contract CasinoToken888{ // конртакт токена-валюты для к
     string constant name = "CasinoToken888";
     string constant symbol = "888";
     mapping(address => uint256) balances; // словарь балансов
- 
+
     modifier onlyOwner(address _adr){
         // собственно сама проверка
         require(_adr == owner || _adr == casino_contr);
         _;
     }
- 
+
     constructor(){
         owner = msg.sender;
         mint(address(this), 1000000000000000000000); // эмиссия огромного количества токенов

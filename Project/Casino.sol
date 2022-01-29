@@ -14,6 +14,7 @@ contract Bank{ // контракт родитель, в котором назо�
     _CasinoToken888 tok;
     address token_owner_address;
     address casino_owner;
+    uint8 result = 2;
  
     constructor(address _owner){
         casino_owner = msg.sender;
@@ -25,7 +26,7 @@ contract Bank{ // контракт родитель, в котором назо�
         require(msg.sender == casino_owner, "Sorry, only owner of the casino can access this function");
         _;
     }
- 
+
     function top_up_balance() public payable { // ф-ия пополнения баланса
         tok.transfer(msg.sender, msg.value);
     }
@@ -66,7 +67,7 @@ contract Games is Bank{ // контракт-наследник от Bank. тут
  
     }
 
-    function Roulette_bet_on_number(uint bet, uint8 number) public  Pay(bet) returns(string memory, uint8){ // ф-ия, в которой реализована логика работы игры 'Ставка на чилсо'
+    function Roulette_bet_on_number(uint bet, uint8 number) public  Pay(bet){ // ф-ия, в которой реализована логика работы игры 'Ставка на чилсо'
         require(number >= 0 && number <= 36, "You must pick a number from 0 to 36");
         tok.transfer_from( msg.sender, address(this), bet);
  
@@ -74,14 +75,14 @@ contract Games is Bank{ // контракт-наследник от Bank. тут
  
         if (res == number){
             tok.transfer_from(address(this), msg.sender, bet * 1000);
-            return("CONGRATS! YOU HAVE JUST WON A SUPER PRIZE! x1000! YOU HAVE GUESSED THE NUMBER:", res);
+            result = 1;
         }
         else{
-            return("You have lost. Unfortunate. Try again! The number was:", res);
+            result = 0;
         }
     }
  
-    function Roulette_bet_on_color(uint bet, string memory color) public  Pay(bet) returns(string memory){ // ф-ия, в которой реализована логика работы игры 'Рулетка'
+    function Roulette_bet_on_color(uint bet, string memory color) public  Pay(bet){ // ф-ия, в которой реализована логика работы игры 'Рулетка'
         require((keccak256(abi.encodePacked(color)) == keccak256(abi.encodePacked("red"))) || (keccak256(abi.encodePacked(color)) == keccak256(abi.encodePacked("black"))) || (keccak256(abi.encodePacked(color)) == keccak256(abi.encodePacked("green"))), "Colors are 'black', 'red' and 'green'");
 
 
@@ -90,20 +91,20 @@ contract Games is Bank{ // контракт-наследник от Bank. тут
  
         if ((res == 0) && (keccak256(abi.encodePacked(color)) == keccak256(abi.encodePacked("green")))){
             tok.transfer_from(address(this), msg.sender, bet * 15);
-            return("CONGRATS! 15x WIN!");
+            result = 1;
         }
         else if ((keccak256(abi.encodePacked(color)) == keccak256(abi.encodePacked("black"))) && (res >= 1) && (res <= 17)){
             tok.transfer_from(address(this), msg.sender, bet * 2);
-            return("Congrats! 2x win!");
+            result = 1;
         }
-        else if ((keccak256(abi.encodePacked(color)) == keccak256(abi.encodePacked("red"))) && (res >= 18) && (res <= 36)){
+        else if ((keccak256(abi.encodePacked(color)) == keccak256(abi.encodePacked("red"))) && (res >= 18) && (res <= 35)){
             tok.transfer_from(address(this), msg.sender, bet * 2);
-            return("Congrats! 2x win!");
+            result = 1;
         }
         else{
-            return("You have lost. Unfortunate. Try again!");
+            result = 0;
         }
- 
+
     }
 
     function rnd_for_slot_machine(address adr, uint num) view internal returns(uint8){ // ф-ия генерации случайного числа для работы слот-машины
@@ -116,18 +117,29 @@ contract Games is Bank{ // контракт-наследник от Bank. тут
  
     }
  
-    function Slot_Machine_bet_and_try_your_luck(uint bet) public Pay(bet) returns(string memory, uint8, uint8, uint8){ // ф-ия, в которой реализована логика работы игры 'Слот-машина'
+    function Slot_Machine_bet_and_try_your_luck(uint bet) public Pay(bet) { // ф-ия, в которой реализована логика работы игры 'Слот-машина'
         tok.transfer_from(msg.sender, address(this), bet);
         uint8 res1 = rnd_for_slot_machine(msg.sender, bet) + 1;
         uint8 res2 = rnd_for_slot_machine(msg.sender, res1) + 1;
         uint8 res3 = rnd_for_slot_machine(msg.sender, res2) + 1;
         if (res1 == res2 && res2 == res3 && res1 == res3){
+            result = 1;
             tok.transfer_from(address(this), msg.sender, bet * 4);
-            return("CONGRATS! YOU HAVE JUST WON A SUPER PRIZE! X4!", res1, res2, res3);
         }
- 
         else{
-            return("You have lost. Unfortunate. Try again!", res1, res2, res3);
+            result = 0;
+        }
+    }
+
+    function check_result() public view returns(string memory){
+        if (result == 1){
+            return("Congrats! You've won");
+        }
+        else if (result == 2){
+            return("You have not played yet");
+        }
+        else if (result == 0){
+            return("Unfortunate! Try again");
         }
     }
 }
