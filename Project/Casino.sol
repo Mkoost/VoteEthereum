@@ -7,7 +7,6 @@ interface _CasinoToken888{ // интерфейс токена
     function transfer_from(address _from, address _to, uint number_of_tokens) external;
     function my_balance() external view returns(uint);
     function balance_of_others(address adr) external view returns(uint);
-    function identify() external;
  
 }
  
@@ -20,8 +19,6 @@ contract Bank{ // контракт родитель, в котором назо�
         casino_owner = msg.sender;
         token_owner_address = _owner;
         tok = _CasinoToken888(token_owner_address);
-        tok.identify();
-        tok.transfer_from(token_owner_address, address(this), 10000000000000000);
     }
 
     modifier onlyOwner(){
@@ -33,7 +30,7 @@ contract Bank{ // контракт родитель, в котором назо�
         tok.transfer(msg.sender, msg.value);
     }
  
-    function request(uint needed_balance) public onlyOwner{ // ф-ия запроса дополнительных токенов для баланса казино
+    function request_tokens(uint needed_balance) public onlyOwner{ // ф-ия запроса дополнительных токенов для баланса казино
         tok.transfer_from(token_owner_address, address(this), needed_balance);
     }
 
@@ -44,6 +41,8 @@ contract Bank{ // контракт родитель, в котором назо�
     function my_balance() public view returns(uint256){ // ф-ия проверки баланса пользователя
         return(tok.balance_of_others(msg.sender));
     }
+
+
 }
  
  
